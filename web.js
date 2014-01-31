@@ -1,5 +1,6 @@
 var express = require("express");
-var app = express();
+var app = express.createServer();
+
 app.use(express.logger());
 app.use("/", express.static(__dirname));
 
