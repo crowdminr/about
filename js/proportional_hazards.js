@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function updateQuote(frailty) {
     var quote;
     if(frailty > 0.66) quote = 'I live in a dumpster.'
-    else if(frailty > 0.33) quote = "I'm an PhD student."
+    else if(frailty > 0.33) quote = "I'm a PhD student."
     else quote = "I own Facebook."
     quoteElement.innerHTML = quote;
   }
