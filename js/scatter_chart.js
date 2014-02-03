@@ -5,6 +5,12 @@ d3.chart('BaseChart').extend('ScatterChart', {
     chart.base
       .classed('Areachart', true);
 
+    chart.areas.rate = chart.base.append('g')
+      .classed('rate', true)
+      .attr('width', chart.w - chart.margins.left)
+      .attr('height', chart.h - chart.margins.bottom - chart.margins.top)
+      .attr('transform', 'translate(' + chart.margins.left + ',' + chart.margins.top+')');
+
     // make actual layers
     chart.layer('circles', chart.areas.plot, {
       // data format:
@@ -47,6 +53,29 @@ d3.chart('BaseChart').extend('ScatterChart', {
             id: function(d) { return d.country; }
           });
         }
+    });
+
+    chart.layer('interestRate', chart.areas.rate, {
+      dataBind : function(data) {
+        var interestRate = data.reduce(function(acc, outcome) {
+          return acc + outcome.netPresentValue * outcome.probability;
+        }, 0);
+        console.log(interestRate);
+
+        return this.selectAll('line')
+          .data([interestRate])
+      },
+      insert: function() {
+        return this.append("line")
+          .classed('interest', true)
+          .attr({
+            x1: function(d) { return chart.x(+d); },
+            y1: chart.y(0),
+            x2: function(d) { return chart.x(+d); },
+            y2: chart.y(1),
+            style: "stroke:rgb(255,0,0);stroke-width:2"
+          })
+      }
     });
 
     // a layer for the x text labels.
@@ -93,8 +122,17 @@ d3.chart('BaseChart').extend('ScatterChart', {
           })
     };
 
+    var onRateEnter = function() {
+      var xpos = function(d) { return chart.x(+d); };
+      this.attr({
+        x1: xpos,
+        x2: xpos,
+      });
+    }
+
     chart.layer('circles').on('enter', onEnter);
     chart.layer('circles').on('update', onEnter);
+    chart.layer('interestRate').on('update', onRateEnter);
   }
 });
 
