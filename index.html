@@ -99,13 +99,13 @@
             </div>
 
             <aside class="notes">
-              Crowdminr uses a combination of statistical techniques.
-              A global hazard function is calculated using survival analysis, specifically Kaplan-Meier estimation,
-              giving the chance of a loan defaulting in each month through its term.
-              Random forests are used to estimate a multiplicative frailty term, which you can think of as how generally broke the borrower is.
+              How are the interest rates predicted to take account of the risks?
+              Random forests are used to estimate the frailty term for a proportional hazards model. This is based on hundreds of features of each loan, which you can think of as how generally broke the borrower is.
+              A global 'hazard rate' is calculated using survival analysis, specifically Kaplan-Meier estimation,
+              which in each month gives the chance of a single loan defaulting, and is multiplied by the frailty term.
               From here you can calculate the probabilities of default in each month.
               Since money is worth less in the future than now, each payment is discounted by its Net Present Value
-              Summing all the probabilities multiplied by their net present values gives an expected return for each loan.
+              Summing all these values multiplied by their probabilities gives an expected return for each loan.
             </aside>
           </div>
         </section>
