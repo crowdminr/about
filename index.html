@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+    <title>Crowdminr.io</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="An overview of how crowdminr.io works">
+		<meta name="author" content="Matt Gibb">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -16,45 +16,75 @@
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
-
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+		<link rel="stylesheet" href="css/custom.css">
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
-
 	<body>
-
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
+        <section>
+          <h1>Crowdminr.io</h1>
+          <h3>High returns for the rest of us</h3>
+          <p>
+            <small>Created by <a href="http://mattgibb.com">Matt Gibb</a></small>
+          </p>
+        </section>
 
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
+        <section>
+          <div class="absolute-element" style="position: absolute; z-index: 4; left: 66px; top: -50px;">
+            <div class="left-column">
+              <h2>Proportional Hazard Model</h2>
+              <span>A borrower \(i\) has frailty</span>
+              <form>
+                <span>\(h\left(\textbf{X}_i\right) = \)</span><nbsp /><input id="frailty" name="r" type="range" min="0.01" max="1.0" value="0.4" step="0.01"><span id="h"></span>
+                <q id="borrower-quote"></q>
+              </form>
+            </div>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+            <div class="right-column">
+              <div class="row">
+                <span>Hazard \(\mu\left(t\right)\)</span>
+                <svg class="chart" id="hazard"></svg>
+              </div>
+
+              <div class="row">
+                <span>Default probability \(f\left(t\right)\)</span>
+                <svg class="chart" id="marginal-default"></svg>
+              </div>
+
+              <div class="row">
+                <span>Net Present Payment Value</span>
+                <svg class="chart" id="net-present-payment-value"></svg>
+              </div>
+
+              <div class="row">
+                <span>Net Present Cumulative Value</span>
+                <svg class="chart" id="net-present-cumulative-value"></svg>
+              </div>
+
+              <div class="row">
+                <span>Return Distribution</span>
+                <svg class="chart" id="return-distribution"></svg>
+              </div>
+            </div>
+
+            <aside class="notes">
+                Put your speaker notes here.
+                You can see them pressing 's'.
+            </aside>
+          </div>
+        </section>
+        <section>
+          <ul>
+            <li class="fragment">Hey</li>
+            <li class="fragment">Hey</li>
+            <li class="fragment">Hey</li>
+          </ul>
+        </section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
@@ -86,13 +116,6 @@
 							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
 						</a>
 					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
 				</section>
 
 				<section>
@@ -353,9 +376,14 @@ function linkify( selector ) {
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-
+    <script src="/lib/js/d3.v3.4.1.min.js"></script>
+    <script src="/js/d3.chart.min.js"></script>
+    <script src="/lib/js/d3.tip.v0.6.3.js"></script>
+    <script src="/js/base_chart.js"></script>
+    <script src="/js/bar_chart.js"></script>
+    <script src="/js/scatter_chart.js"></script>
+    <script src="/js/proportional_hazards.js"></script>
 		<script>
-
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({

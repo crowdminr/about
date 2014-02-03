@@ -1,0 +1,82 @@
+.left-column {
+  padding-top: 7em !important;
+  float: left;
+  width: 39%
+}
+
+.right-column {
+  float: right;
+  width: 55%
+}
+
+.Basechart .label {
+  font-size: 30%;
+}
+.Basechart text {
+  fill: white;
+}
+
+.Basechart .xlabels line {
+  stroke: white;
+}
+
+.Basechart .ylabels .tick text {
+  font-size: 0.4em;
+}
+.Basechart .ylabels .tick line {
+  fill: none;
+  stroke: white;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+.Basechart path.domain {
+  fill: none;
+  stroke: none;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+.Barchart .plot rect.bar {
+  fill: #97E8A2;
+}
+
+.Areachart .plot circle.circle {
+  fill: #97E8A2;
+}
+
+q#borrower-quote {
+  font-size: 1.2em;
+  display: block;
+  quotes: "“" "”"
+}
+
+input[type=range] {
+  /* -webkit-appearance: slider-vertical; */
+  width: 200px;
+}
+
+#h {
+  display: inline-block;
+  width: 30px;
+}
+
+svg.chart {
+  height: 122px;
+  width: 400px;
+}
+
+h3.rotate {
+  margin-left: -50px;
+  position: absolute;
+  -webkit-transform: translate(-50%,-50%) rotate(-90deg);
+  -moz-transform: translate(-50%,-50%) rotate(-90deg);
+  -ms-transform: translate(-50%,-50%) rotate(-90deg);
+  -o-transform: translate(-50%,-50%) rotate(-90deg);
+  transform: translate(-50%,-50%) rotate(-90deg);
+
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  transform-origin: center center;
+}
+
