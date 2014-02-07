@@ -2,6 +2,12 @@ d3.chart('BaseChart').extend('ScatterChart', {
   initialize: function() {
     var chart = this;
 
+    chart.w = 820;
+
+    // default chart ranges
+    chart.x = d3.scale.linear()
+      .range([0, chart.w - chart.margins.left]);
+
     chart.base
       .classed('Areachart', true);
 
@@ -27,7 +33,7 @@ d3.chart('BaseChart').extend('ScatterChart', {
 
         chart.x.domain([0, xmax + 3]);
 
-        chart.y.domain([0, 1]);
+        chart.y.domain([0, 1.05]);
 
         // draw yaxis
         var yAxis = d3.svg.axis()

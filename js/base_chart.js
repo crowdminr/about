@@ -7,7 +7,7 @@ d3.chart("BaseChart", {
 
     // default height and width
     chart.w = chart.base.attr('width') || 400;
-    chart.h = chart.base.attr('height') || 150;
+    chart.h = chart.base.attr('height') || 200;
 
     // chart margins to account for labels.
     // we may want to have setters for this

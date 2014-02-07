@@ -1,12 +1,26 @@
-.left-column {
-  padding-top: 7em !important;
-  float: left;
-  width: 39%
+.three-columns {
+  z-index: 4;
+  left: -238px;
+  top: -20px;
+  width: 1400px;
 }
 
-.right-column {
-  float: right;
-  width: 55%
+.three-columns .column {
+  width: 33%;
+  float: left;
+}
+
+/* .column:before, .column:after { */
+/*   content: ""; */
+/*   display: table; */
+/* } */
+/* .column:after { */
+/*   clear: both; */
+/* } */
+
+.left-column {
+  padding-top: 6em !important;
+  margin-bottom: -1em !important;
 }
 
 .Basechart .label {
@@ -60,8 +74,16 @@ input[type=range] {
 }
 
 svg.chart {
-  height: 122px;
+  height: 193px;
   width: 400px;
+}
+
+#return-distribution {
+  margin-left: 400px;
+}
+
+svg.chart.Areachart {
+  width: 800px;
 }
 
 h3.rotate {

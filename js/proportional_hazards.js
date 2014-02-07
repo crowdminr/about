@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
                       .max(d3.max(hazardData));
   var marginalDefaultChart = d3.select("svg#marginal-default").chart('BarChart')
                         .max(d3.max(marginalDefault(hazardData)));
-  var returnDistributionChart = d3.select("svg#return-distribution").chart('ScatterChart');
+  var returnDistributionChart = d3.select("#return-distribution svg").chart('ScatterChart');
   // probability for each month that
   //   a) The loan hasn't defaulted yet AND
   //   b) the loan will default this month

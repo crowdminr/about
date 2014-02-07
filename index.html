@@ -61,17 +61,17 @@
         </section>
 
         <section>
-          <div class="absolute-element" style="position: absolute; z-index: 4; left: 66px; top: -50px;">
-            <div class="left-column">
+          <div class="absolute-element three-columns" style="position: absolute">
+            <div class="column left-column">
               <h2>Proportional Hazard Model</h2>
               <span>A borrower \(i\) has frailty</span>
               <form>
-                <span>\(h\left(\textbf{X}_i\right) = \)</span><nbsp /><input id="frailty" name="r" type="range" min="0.01" max="1.0" value="0.4" step="0.01"><span id="h"></span>
+                <span>\(h\left(\textbf{X}_i\right) = \)</span><nbsp /><input id="frailty" name="r" type="range" min="0.0" max="1.0" value="0.4" step="0.01"><span id="h"></span>
                 <q id="borrower-quote"></q>
               </form>
             </div>
 
-            <div class="right-column">
+            <div class="column">
               <div class="row fragment">
                 <span>Hazard \(\mu\left(t\right)\)</span>
                 <svg class="chart" id="hazard"></svg>
@@ -81,7 +81,9 @@
                 <span>Default probability \(f\left(t\right)\)</span>
                 <svg class="chart" id="marginal-default"></svg>
               </div>
+            </div>
 
+            <div class="column">
               <div class="row fragment">
                 <span>Net Present Payment Value</span>
                 <svg class="chart" id="net-present-payment-value"></svg>
@@ -91,11 +93,13 @@
                 <span>Net Present Cumulative Value</span>
                 <svg class="chart" id="net-present-cumulative-value"></svg>
               </div>
+            </div>
 
-              <div class="row fragment">
-                <span>Return Distribution</span>
-                <svg class="chart" id="return-distribution"></svg>
-              </div>
+            <div style="clear: both">
+
+            <div class="row fragment" id="return-distribution">
+              <p>Return Distribution</p>
+              <svg class="chart"></svg>
             </div>
 
             <aside class="notes">
