@@ -114,13 +114,59 @@
           </div>
         </section>
 
-        <section>
-          <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/mattgibb/images/237979/stack.png" class="absolute-element" style="position: absolute; max-height: none; max-width: none; width: 923.0610956634571px; height: 687.6486194383172px; z-index: 4; left: 2px; top: -6px;">
+        <section data-background="#ffffff">
+          <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/mattgibb/images/237979/stack.png" class="absolute-element" style="position: absolute; max-height: none; max-width: none; width: 923.0610956634571px; height: 687.6486194383172px; z-index: 4; left: 2px; top: -6px; box-shadow: none">
         </section>
 
-        <section>
-          <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/mattgibb/images/238469/about_me.png" style="width: 878px; height: 656.6816568047337px; max-height: none; max-width: none;">
+        <!-- <section> -->
+        <!--   <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/mattgibb/images/238469/about_me.png" style="width: 878px; height: 656.6816568047337px; max-height: none; max-width: none;"> -->
+        <!-- </section> -->
+
+        <section id="about-me" data-background="#ffffff">
+          <div id="about-me-container">
+            <h2 style="position: absolute;">Matt Gibb</h2>
+            <img src="/images/oxford_logo.jpeg" id="oxford-logo" />
+            <div class="fragment" id="hobbies"></div>
+            <div id="research">
+              <div>
+                <video data-autoplay width="400px">
+                  <source src="videos/vessel.webm" type="video/webm">
+                  Your browser is old and doesn't support html5 video. Try Google Chrome.
+                </video>
+              </div>
+              <div>
+                <video data-autoplay width="400px">
+                  <source src="videos/wave.webm" type="video/webm">
+                </video>
+              </div>
+              <div id="smoothing" style="clear: left">
+                <img src="images/unsmoothed_dummy.png" height="200px" />
+                <img src="images/smoothed_dummy.png" height="200px" />
+                <img src="images/locally_smoothed_vessels.png" height="200px" />
+              </div>
+            </div>
+          </div>
         </section>
+
+        <!-- <section id='theme-picker'> -->
+        <!--   <p>beige</p> -->
+        <!--   <p>blood</p> -->
+        <!--   <p>default</p> -->
+        <!--   <p>moon</p> -->
+        <!--   <p>night</p> -->
+        <!--   <p>serif</p> -->
+        <!--   <p>simple</p> -->
+        <!--   <p>sky</p> -->
+        <!--   <p>solarized</p> -->
+        <!--   <script> -->
+        <!--     var ps = document.querySelectorAll('#theme-picker p') -->
+        <!--     for(var i=0; i<ps.length; ++i) { -->
+        <!--       ps[i].onclick = function(event) { -->
+        <!--         Reveal.configure({theme: event.currentTarget.innerText}); -->
+        <!--       }; -->
+        <!--     } -->
+        <!--   </script> -->
+        <!-- </section> -->
 			</div>
 		</div>
 
@@ -137,13 +183,15 @@
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: true,
+				controls: false,
 				progress: true,
 				history: true,
 				center: true,
+        overview: false,
+        viewDistance: 1,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				theme: Reveal.getQueryHash().theme || 'default', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
@@ -161,6 +209,5 @@
 			});
 
 		</script>
-
 	</body>
 </html>

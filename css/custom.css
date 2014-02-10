@@ -10,6 +10,10 @@
   float: left;
 }
 
+.reveal section img {
+  border: none;
+}
+
 /* .column:before, .column:after { */
 /*   content: ""; */
 /*   display: table; */
@@ -102,3 +106,64 @@ h3.rotate {
   transform-origin: center center;
 }
 
+/* about me slide */
+#about-me img {
+  box-shadow: none;
+
+}
+#research * {
+  float: left;
+}
+
+#research video {
+  width: 320px;
+  margin 10px;
+  border-radius: 15px / 10px;
+  margin-bottom: 20px;
+}
+
+#hobbies {
+  background-image:url('/images/me.jpg');
+  float: right;
+  width: 508px;
+  height: 351px;
+  border-radius: 15px / 10px;
+}
+
+#smoothing {
+  width: 960px;
+  background: white;
+  border-radius: 15px / 10px;
+  text-align: justify;
+}
+
+#smoothing img {
+  margin-right: 50px;
+  height: 313px;
+}
+
+#smoothing img:last-child {
+  margin-right: 0;
+  float: right;
+}
+
+#about-me-container {
+  z-index: 4;
+  left: -173px;
+  top: -20px;
+  width: 960px;
+}
+
+#about-me-container h2 {
+  left: 362px;
+  top: -50px;
+  color: #666666;
+}
+
+#about-me-container #oxford-logo {
+  float: right;
+  position: absolute;
+  right: 108px;
+  height: 323px;
+  z-index: -1;
+}
