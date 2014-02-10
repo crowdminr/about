@@ -5,8 +5,6 @@ d3.chart('BaseChart').extend('BarChart', {
     chart.base
       .classed('Barchart', true);
 
-    chart.w = chart.base.attr('width') || 400;
-
     // make actual layers
     chart.layer('bars', chart.areas.plot, {
       // data format:
