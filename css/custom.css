@@ -150,14 +150,15 @@ h3.rotate {
 #about-me-container {
   z-index: 4;
   left: -173px;
-  top: -20px;
+  top: -10px;
   width: 960px;
 }
 
 #about-me-container h2 {
   left: 362px;
-  top: -50px;
+  top: -38px;
   color: #666666;
+  font-size: 0.8em;
 }
 
 #about-me-container #oxford-logo {
